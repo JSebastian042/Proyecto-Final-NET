@@ -1,0 +1,20 @@
+@Library.API_HostAddress = https://localhost:7028
+
+
+POST {{Library.API_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Juan Jurado",
+  "email": "juan@opitech.com",
+  "password": "sebastian123",
+  "role": "Lector"
+}
+
+
+POST {{Library.API_HostAddress}}/api/loans?copyId=1&userId=1
+Content-Length: 0
+
+
+POST {{Library.API_HostAddress}}/api/loans/1/return
+Content-Length: 0
